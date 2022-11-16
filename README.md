@@ -22,6 +22,8 @@ Curso 2022-2023.
 [anchor-id1]: https://github.com/angelgxrcia
 
 
-# PRÓXIMAMENTE
+# Información
+
+En la carpeta "doc" se encuentran los diagramas y el diario de seguimiento sobre el proyecto.
 
 
