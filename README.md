@@ -1,7 +1,7 @@
 # Space Invaders DAW
 
-![](https://github.com/angelgxrcia/SpaceInvadersDAW/blob/main/logo.png)
-<p align="center"><img src="https://github.com/angelgxrcia/SpaceInvadersDAW/blob/main/logotext.png" alt="Logo"></p>
+![](https://github.com/angelgxrcia/SpaceInvadersDAW/blob/master/logo.png)
+<p align="center"><img src="https://github.com/angelgxrcia/SpaceInvadersDAW/blob/master/logotext.png" alt="Logo"></p>
 
 Space Invaders es un proyecto del CFGS Desarrollo de Aplicaciones Web en Politécnico Jesús Marín (Málaga) creado por alumnos de primer curso, como actividad de la Asignatura de Programación.
 Curso 2022-2023.
