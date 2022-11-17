@@ -1,28 +1,44 @@
 package com.politecnicomalaga.game;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Navealiada {
 
     //Atributos de la nave aliada
-    private int posX;
-    private int posY;
-    private int lado;
-    private float velocidad;
-    private Texture imagen;
-    private boolean vida;
+    private float posX;                                                 //Posicion X de la nave
+    private float posY;                                                 //Posición Y de la nave
+    private Texture imagen;                                             //Imagen de la nave
+    private short anchoPant;                                            //Ancho de la pantalla para saber hasta donde podemos moverla
+    static private final float VELOCIDAD = 3.0f;                        //Velocidad a la que se va a mover la nave
+    static public final String SPRITE_NAVE_ALIADA = "Navealiada.png";   //String que contiene el archivo de imagen
 
     //Constructor, donde se incicializan los valores de nuestra querida nave
 
-    public Navealiada (int posX, int posY, Texture imagen) {
+    public Navealiada (float posX, float posY, short anchoPantalla) {
         this.posX = posX;
         this.posY = posY;
-        vida = true;
-        this.imagen = imagen;
+        imagen = new Texture(SPRITE_NAVE_ALIADA);
+        anchoPant = anchoPantalla;
     }
 
     //Comportamientos
+    public void moverse(EstadoTeclado et) {
+        if (et.isTeclaIzq() && posX > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
+            posX -= VELOCIDAD;
+        }
+        if (et.isTeclaDer() && posX < this.anchoPant) {   //si se pulsa a la derecha y detecta que no esta en el borde derecho, se mueve a la derecha
+            posX += VELOCIDAD;
+        }
+    }
+    public void pintarse(SpriteBatch miSB) {
+        miSB.draw(imagen, posX-(imagen.getWidth()/2.0f), posY-(imagen.getHeight()/2.0f));
+    }
 
-
+    public void dispose() {
+        if (imagen != null) {
+            imagen.dispose();
+        }
+    }
 
 }
