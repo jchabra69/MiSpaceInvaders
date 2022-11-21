@@ -24,15 +24,15 @@ public class Navealiada {
 
     //Comportamientos
     public void moverse(EstadoTeclado et) {
-        if (et.isTeclaIzq() && posX > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
+        if (et.isTeclaIzq() && posX-25f > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
             posX -= VELOCIDAD;
         }
-        if (et.isTeclaDer() && posX < this.anchoPant) {   //si se pulsa a la derecha y detecta que no esta en el borde derecho, se mueve a la derecha
+        if (et.isTeclaDer() && posX+25f < this.anchoPant) {   //si se pulsa a la derecha y detecta que no esta en el borde derecho, se mueve a la derecha
             posX += VELOCIDAD;
         }
     }
     public void pintarse(SpriteBatch miSB) {
-        miSB.draw(imagen, posX-(imagen.getWidth()/2.0f), posY-(imagen.getHeight()/2.0f));
+        miSB.draw(imagen, posX-(200/2.0f), posY-(200/2.0f),200,200);
     }
 
     public void dispose() {
