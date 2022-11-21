@@ -1,11 +1,11 @@
 
-· DIA 15 nov:
+# DIA 15 nov:
 Hemos llegado a las siguientes conclusiones:
 - Hay que guardar los diagramas en una carpeta llamada doc, al igual que el diario.
 - La extensión de los audios debe ser .ogg
 
 
-· DIA 16 nov:
+# DIA 16 nov:
 Nos hemos asignado las partes del trabajo que debemos hacer:
 Space invaders:
   Diagrama de Casos de Uso:
@@ -13,7 +13,7 @@ Space invaders:
   Diagrama de clases:
     HECHO EN GRUPO.
   Diagrama de objetos:
-    Nico. 
+    Felipe. 
   Nave aliada: 
     Nico, Ángel
   Nave enemiga: 
@@ -21,22 +21,22 @@ Space invaders:
   Disparo: 
     Gonzalo, Ardila.
   Controlador, MyGdxGame, Teclado: 
-    Ángel, Jose 
+    Ángel, Jose. 
 
 Snake:
   Diagrama de Casos de Uso:
     Felipe (solo hacer el commit, Ángel los tiene hecho)
   Diagrama de clases:
-    Ardila
+    Ardila.
   Diagrama de objetos:
-    Ángel 
+    Ángel.
   Ampliación 1:
-    Ángel
+    Ángel.
   Ampliación 2:
     Gonzalo, Nico.
 
-· DIA 17 al 21 nov incluido:
+# DIA 17 al 21 nov incluido:
 Cada uno ha realizado la parte del trabajo que tenía asignada.
 
-· DIA 21 nov:
+# DIA 21 nov:
 Hemos hecho una reunión en la que hemos comparado las ramas y hemos revisado el trabajo de cada uno.
