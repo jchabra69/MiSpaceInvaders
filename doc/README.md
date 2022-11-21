@@ -7,23 +7,14 @@ Hemos llegado a las siguientes conclusiones:
 
 # DIA 16 nov:
 Nos hemos asignado las partes del trabajo que debemos hacer:
-
-Space invaders:
-  Diagrama de Casos de Uso:
-    Nico.
-  Diagrama de clases:
-    HECHO EN GRUPO.
-  Diagrama de objetos:
-    Felipe. 
-  Nave aliada: 
-    Nico, Ángel
-  Nave enemiga: 
-    Felipe, Jose
-  Disparo: 
-    Gonzalo, Ardila.
-  Controlador, MyGdxGame, Teclado: 
-    Ángel, Jose. 
-
++ Space invaders:
+    + Diagrama de Casos de Uso: Nico
+    + Diagrama de clases: HECHO EN GRUPO.
+    + Diagrama de objetos: Felipe. 
+    + Nave aliada: Nico, Ángel
+    + Nave enemiga: Felipe, Jose
+    + Disparo: Gonzalo, Ardila.
+    + Controlador, MyGdxGame, Teclado: Ángel, Jose. 
 
 # DIA 17 al 21 nov incluido:
 Cada uno ha realizado la parte del trabajo que tenía asignada.
