@@ -8,7 +8,7 @@ Hemos llegado a las siguientes conclusiones:
 # DIA 16 nov:
 Nos hemos asignado las partes del trabajo que debemos hacer:
 
-- Space invaders:
+Space invaders:
   Diagrama de Casos de Uso:
     Nico.
   Diagrama de clases:
