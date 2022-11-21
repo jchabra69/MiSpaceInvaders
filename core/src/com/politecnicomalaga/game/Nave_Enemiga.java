@@ -25,12 +25,12 @@ public class Nave_Enemiga {
     //Comportamientos
     public void moverse() {
         boolean sentido = false;
-        while(sentido = false){
+        while(sentido == false){
             posX += VELOCIDAD;
             if (posX+50f > anchoPant){
                 sentido = true;
             }else if
-            (sentido = true){
+            (sentido == true){
             posX -= VELOCIDAD;
             if (posX-50f < 0){
                 sentido = false;
