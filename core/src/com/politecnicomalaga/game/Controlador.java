@@ -1,44 +1,54 @@
 package com.politecnicomalaga.game;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class Navealiada {
+public class Controlador {
 
-    //Atributos de la nave aliada
-    private float posX;                                                 //Posicion X de la nave
-    private float posY;                                                 //Posición Y de la nave
-    private Texture imagen;                                             //Imagen de la nave
-    private short anchoPant;                                            //Ancho de la pantalla para saber hasta donde podemos moverla
-    static private final float VELOCIDAD = 3.0f;                        //Velocidad a la que se va a mover la nave
-    static public final String SPRITE_NAVE_ALIADA = "Navealiada.png";   //String que contiene el archivo de imagen
+    //Estado
+    SpriteBatch batch;
+    Navealiada navealiada;
+    EstadoTeclado et;
+    Texture fondo;
 
-    //Constructor, donde se incicializan los valores de nuestra querida nave
 
-    public Navealiada (float posX, float posY, short anchoPantalla) {
-        this.posX = posX;
-        this.posY = posY;
-        imagen = new Texture(SPRITE_NAVE_ALIADA);
-        anchoPant = anchoPantalla;
+
+
+
+
+    public Controlador(){                            //incializamos nuestro teclado virtual, nuestro fondo, el batch y la nave estando centrada y en la zona inferior
+        batch = new SpriteBatch();
+        fondo = new Texture("Galaxia.jpg");
+        et = new EstadoTeclado(Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
+        navealiada = new Navealiada(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/10,(short)Gdx.graphics.getWidth());
+
     }
 
-    //Comportamientos
-    public void moverse(EstadoTeclado et) {
-        if (et.isTeclaIzq() && posX-50 > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
-            posX -= VELOCIDAD;
-        }
-        if (et.isTeclaDer() && posX+50 < this.anchoPant) {   //si se pulsa a la derecha y detecta que no esta en el borde derecho, se mueve a la derecha
-            posX += VELOCIDAD;
-        }
+
+   public void render(){                                       //dibujamos todo en el batch y controlamos el movimiento de la nave
+        this.control();
+        batch.begin();
+        batch.draw(fondo, 0, 0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight() );
+        navealiada.pintarse(batch);
+        batch.end();
     }
-    public void pintarse(SpriteBatch miSB) {
-        miSB.draw(imagen, posX-(200/2.0f), posY-(200/2.0f),200,200);
+    private void control(){             //si pulsan la pantalla, le decimos a estado teclado que lo simule y se lo pasamos a nave para que se mueva
+        boolean recienTocado;
+
+        recienTocado = Gdx.input.justTouched();
+        if (recienTocado) {
+            et.simulaTeclado(Gdx.input.getX(), Gdx.input.getY());
+        }
+        navealiada.moverse(et);
     }
 
-    public void dispose() {
-        if (imagen != null) {
-            imagen.dispose();
+    public void dispose(){
+        if (batch != null) {
+            batch.dispose();
         }
+
+        navealiada.dispose();
     }
 
 }
