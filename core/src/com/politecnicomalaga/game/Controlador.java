@@ -23,7 +23,7 @@ public class Controlador {
         fondo = new Texture("Galaxia.jpg");
         et = new EstadoTeclado(Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
         navealiada = new Navealiada(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/10,(short)Gdx.graphics.getWidth());
-        naveenemiga = new Nave_Enemiga(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight(),(short)Gdx.graphics.getWidth());
+        naveenemiga = new Nave_Enemiga(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()-60,(short)Gdx.graphics.getWidth());
     }
 
 
