@@ -11,6 +11,7 @@ public class Controlador {
     Navealiada navealiada;
     EstadoTeclado et;
     Texture fondo;
+    Nave_Enemiga naveenemiga;
 
 
 
@@ -22,7 +23,7 @@ public class Controlador {
         fondo = new Texture("Galaxia.jpg");
         et = new EstadoTeclado(Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
         navealiada = new Navealiada(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/10,(short)Gdx.graphics.getWidth());
-
+        naveenemiga = new Nave_Enemiga(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight(),(short)Gdx.graphics.getWidth());
     }
 
 
@@ -31,6 +32,7 @@ public class Controlador {
         batch.begin();
         batch.draw(fondo, 0, 0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight() );
         navealiada.pintarse(batch);
+        naveenemiga.pintarse(batch);
         batch.end();
     }
     private void control(){             //si pulsan la pantalla, le decimos a estado teclado que lo simule y se lo pasamos a nave para que se mueva
@@ -41,6 +43,7 @@ public class Controlador {
             et.simulaTeclado(Gdx.input.getX(), Gdx.input.getY());
         }
         navealiada.moverse(et);
+        naveenemiga.moverse();
     }
 
     public void dispose(){
