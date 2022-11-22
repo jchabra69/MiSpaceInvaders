@@ -30,7 +30,7 @@ public class Controlador {
    public void render(){                                       //dibujamos todo en el batch y controlamos el movimiento de la nave
         this.control();
         batch.begin();
-        batch.draw(fondo, 0, 0);
+        batch.draw(fondo, 0, 0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight() );
         navealiada.pintarse(batch);
         naveenemiga.pintarse(batch);
         batch.end();
