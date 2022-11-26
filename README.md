@@ -6,9 +6,9 @@ Space Invaders es un proyecto del CFGS Desarrollo de Aplicaciones Web en Polité
 Curso 2022-2023.
 
 # Componentes del grupo
-+ [Gonzalo Ruiz Morales][anchor-id6] (Scrum Master)
++ [Gonzalo Ruiz Morales][anchor-id6] 
 + [José Nicolás Chamero Bravo][anchor-id5]
-+ [José Manuel Ardila Alba][anchor-id4]
++ [José Manuel Ardila Alba][anchor-id4] (Scrum Master)
 + [José Gómez Morata][anchor-id3]
 + [Felipe Ruiz Gambero][anchor-id2]
 + [Ángel Doña García][anchor-id1]
