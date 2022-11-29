@@ -1,3 +1,5 @@
+SCRUM MASTER--> Gonzalo
+
 # DIA 8 nov:
 Realización de una reunión entre todos los integrantes del grupo, creamos la estructura de directorios con “Libgdx” cual se subió a Github.
 
@@ -31,3 +33,8 @@ Cada uno ha realizado la parte del trabajo que tenía asignada.
 
 # DIA 21 nov:
 Hemos hecho una reunión en la que hemos comparado las ramas y hemos revisado el trabajo de cada uno.
+
+CAMBIO DE SCRUM MASTER--> José Ardila
+
+# DIA 29 nov:
+Space Invaders no ha sufrido cambios, porque el control de movimiento ya estaba hecho de la semana pasada, aún así, Nico ha actualizado el diagrama de casos de uso, y Felipe el de objetos y clases.
