@@ -3,7 +3,6 @@ package com.politecnicomalaga.game;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.politecnicomalaga.game.MyGdxGame;
 
 
 // Please note that on macOS your application needs to be started with the -XstartOnFirstThread JVM argument
@@ -13,6 +12,6 @@ public class DesktopLauncher {
 		Graphics.DisplayMode dm = Lwjgl3ApplicationConfiguration.getDisplayMode();
 		config.setForegroundFPS(60);
 		config.setTitle("Space Invaders");
-		new Lwjgl3Application(new MyGdxGame(), config);
+		new Lwjgl3Application(new MyGdxSpaceInvaders(), config);
 	}
 }
