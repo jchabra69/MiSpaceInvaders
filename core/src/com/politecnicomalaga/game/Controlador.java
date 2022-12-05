@@ -44,6 +44,7 @@ public class Controlador {
         }
         navealiada.moverse(et);
         naveenemiga.moverse();
+        Disparo.control();
     }
 
     public void dispose(){

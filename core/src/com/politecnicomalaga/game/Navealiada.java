@@ -13,6 +13,8 @@ public class Navealiada {
     static private final float VELOCIDAD = 3.0f;                        //Velocidad a la que se va a mover la nave
     static public final String SPRITE_NAVE_ALIADA = "Navealiada.png";   //String que contiene el archivo de imagen
 
+    static private int contadorFrames = 0;
+
     //Constructor, donde se incicializan los valores de nuestra querida nave
 
     public Navealiada (float posX, float posY, short anchoPantalla) {
@@ -32,6 +34,13 @@ public class Navealiada {
 
             posX += VELOCIDAD;
         }
+
+        contadorFrames++;
+        if(contadorFrames >= 30){
+            Disparo d = new Disparo(this.posX, this.posY, false, 5f);
+            contadorFrames = 0;
+        }
+
     }
     public void pintarse(SpriteBatch miSB) {
         miSB.draw(imagen, posX-(200/2.0f), posY-(200/2.0f),200,200);
