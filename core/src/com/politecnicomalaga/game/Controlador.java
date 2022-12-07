@@ -12,6 +12,7 @@ public class Controlador {
     EstadoTeclado et;
     Texture fondo;
     Nave_Enemiga naveenemiga;
+    Disparo disparos;
 
 
 
@@ -24,15 +25,20 @@ public class Controlador {
         et = new EstadoTeclado(Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
         navealiada = new Navealiada(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/10,(short)Gdx.graphics.getWidth());
         naveenemiga = new Nave_Enemiga(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()-60,(short)Gdx.graphics.getWidth());
+        disparos = new Disparo(0, 0, false, 0);
+        disparos.start();
+
     }
 
 
    public void render(){                                       //dibujamos todo en el batch y controlamos el movimiento de la nave
         this.control();
+        disparos.control();
         batch.begin();
         batch.draw(fondo, 0, 0,Gdx.graphics.getWidth(), Gdx.graphics.getHeight() );
-        navealiada.pintarse(batch);
         naveenemiga.pintarse(batch);
+        disparos.pintarseTodos(batch);
+        navealiada.pintarse(batch);
         batch.end();
     }
     private void control(){             //si pulsan la pantalla, le decimos a estado teclado que lo simule y se lo pasamos a nave para que se mueva

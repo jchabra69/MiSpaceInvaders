@@ -12,8 +12,9 @@ public class Navealiada {
     private short anchoPant;                                            //Ancho de la pantalla para saber hasta donde podemos moverla
     static private final float VELOCIDAD = 3.0f;                        //Velocidad a la que se va a mover la nave
     static public final String SPRITE_NAVE_ALIADA = "Navealiada.png";   //String que contiene el archivo de imagen
-    //static private int contadorFrames = 0;
 
+    //-----------------------
+    private int contador = 0;
     //Constructor, donde se incicializan los valores de nuestra querida nave
 
     public Navealiada (float posX, float posY, short anchoPantalla) {
@@ -25,7 +26,14 @@ public class Navealiada {
 
     //Comportamientos
     public void moverse(EstadoTeclado et) {
-    
+
+
+        if(contador >= 30){
+            new Disparo(posX, posY, false, 3);
+            contador = 0;
+        }
+        contador++;
+
         if (et.isTeclaIzq() && posX-25f > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
             posX -= VELOCIDAD;
         }
