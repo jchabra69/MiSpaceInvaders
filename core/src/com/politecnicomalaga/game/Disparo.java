@@ -1,5 +1,6 @@
 package com.politecnicomalaga.game;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -22,10 +23,14 @@ public class Disparo {
     static private final String SPRITE_DISPARO_AMIGO = "DisparoAmigo.png";
     static private final String SPRITE_DISPARO_ENEMIGO = "DisparoEnemigo.png";
 
+    static private float ScreenWidth = 0;
+    static private float ScreenHeight = 0;
+
     public static void control () {
         try{
             for (Disparo d: disparoList) {
                 d.moverse();
+                d.colisiones();
             }
         } catch(Exception e){
             System.out.println(e);
@@ -34,6 +39,16 @@ public class Disparo {
 
     public static void start(){
         disparoList = new ArrayList<>();
+        ScreenHeight = Gdx.graphics.getHeight();
+        ScreenWidth = Gdx.graphics.getWidth();
+    }
+
+    public void colisiones(){
+        //Detectar si está fuera de la pantalla para destruirse:
+        if(posY > ScreenHeight || posX > ScreenWidth || posY < 0 || posX < 0)
+            this.destruirse();
+        //Detectar si toca a una nave:
+
     }
 
     public void moverse(){
