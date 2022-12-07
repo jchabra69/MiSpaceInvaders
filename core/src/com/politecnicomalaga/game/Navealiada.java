@@ -25,7 +25,10 @@ public class Navealiada {
 
     //Comportamientos
     public void moverse(EstadoTeclado et) {
-    
+
+
+        Disparo d = new Disparo(posX, posY, false, 3);
+
         if (et.isTeclaIzq() && posX-25f > 0) {                //si se pulsa a la izquierda y detecta que no esta en el borde izquierdo, se mueve a la izquierda
             posX -= VELOCIDAD;
         }
