@@ -38,3 +38,7 @@ CAMBIO DE SCRUM MASTER--> José Ardila
 
 # DIA 29 nov:
 Space Invaders no ha sufrido cambios, porque el control de movimiento ya estaba hecho de la semana pasada, aún así, Nico ha actualizado el diagrama de casos de uso, y Felipe el de objetos y clases.
+
+# DIA 30 nov al 7 dic:
+Gonzalo siguió con la clase disparo realizando los propuesto en el Classroom. Asimismo, cada uno de los integrantes hizo la parte que le correspondía en esa semana.
+Nico arregló el proyecto y deshabilitó los disparos
