@@ -17,28 +17,29 @@ public class Disparo {
     private float posY;
     private Texture imagen;
     private short anchoPant;                                            //Ancho de la pantalla para saber hasta donde podemos moverla
-    static private final float VELOCIDAD = 5.0f;                        //Velocidad a la que se va a mover la nave
+    private float VELOCIDAD = 5.0f;                        //Velocidad a la que se va a mover la nave
 
-    static private List<Disparo> disparoList;
     static private final String SPRITE_DISPARO_AMIGO = "DisparoAmigo.png";
     static private final String SPRITE_DISPARO_ENEMIGO = "DisparoEnemigo.png";
+
 
     static private float ScreenWidth = 0;
     static private float ScreenHeight = 0;
 
-    public static void control () {
-        try{
-            for (Disparo d: disparoList) {
-                d.moverse();
-                d.colisiones();
-            }
-        } catch(Exception e){
-            System.out.println(e);
-        }
+
+
+    public Disparo (float posX, float posY, boolean esEnemiga, float velocidad) {
+        this.posX = posX;
+        this.posY = posY;
+        enemigo = esEnemiga;
+        if(enemigo)
+            imagen = new Texture(SPRITE_DISPARO_ENEMIGO);
+        else
+            imagen = new Texture(SPRITE_DISPARO_AMIGO);
     }
 
-    public static void start(){
-        disparoList = new ArrayList<>();
+
+    public static void Start(){
         ScreenHeight = Gdx.graphics.getHeight();
         ScreenWidth = Gdx.graphics.getWidth();
     }
@@ -55,27 +56,9 @@ public class Disparo {
         posY += VELOCIDAD;
     }
 
-    public static void pintarseTodos(SpriteBatch miSB){
-        for(Disparo d: disparoList){
-            d.pintarse(miSB);
-        }
-    }
 
     public void pintarse(SpriteBatch miSB) {
         miSB.draw(imagen, posX - 5 /*Para que esté centrado en la nave*/, posY + 40,10,10);
-    }
-
-    public Disparo (float posX, float posY, boolean esEnemiga, float velocidad) {
-        this.posX = posX;
-        this.posY = posY;
-        enemigo = esEnemiga;
-        if(enemigo)
-            imagen = new Texture(SPRITE_DISPARO_ENEMIGO);
-        else
-            imagen = new Texture(SPRITE_DISPARO_AMIGO);
-
-        if(disparoList != null)
-            disparoList.add(this);
     }
 
 
@@ -88,6 +71,6 @@ public class Disparo {
     }*/
     public void destruirse() {
         imagen.dispose();
-        disparoList.remove(this);
+        RafagaDisparos.destruirme(this);
     }
 }
