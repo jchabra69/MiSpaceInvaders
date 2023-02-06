@@ -17,9 +17,6 @@ public class Controlador {
 
 
 
-
-
-
     public Controlador(){                            //incializamos nuestro teclado virtual, nuestro fondo, el batch y la nave estando centrada y en la zona inferior
         batch = new SpriteBatch();
         fondo = new Texture("Galaxia.jpg");
